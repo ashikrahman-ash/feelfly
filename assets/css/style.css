@@ -338,12 +338,10 @@ a:hover { color: #009fd3; }
 /*--- FAQ page -/Start ---*/
 .faq-wrapper { border-radius: 16px; padding: 60px 100px; }
 
-/* faq style */
 .accordion-list .accordion-title { cursor: pointer !important; }
 .accordion-list .accordion-desc { display: grid; grid-template-columns: 20px 1fr; gap: 10px; }
 .accordion-list .border-bottom { border-bottom: 1px solid #BADDF0 !important; }
 
-/* faq style - END*/
 .all-tab-action { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
 @media (max-width: 991px) { .all-tab-action { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; } }
 .all-tab-action .tab-action { width: 350px; position: -webkit-sticky; position: sticky; top: 100px; }
