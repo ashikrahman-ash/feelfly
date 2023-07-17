@@ -376,3 +376,15 @@ a:hover { color: #009fd3; }
 
 /* jobs  - end*/
 /*--- FAQ page -/End ---*/
+/*--- Afzal bhail -/Start ---*/
+.documentary-tablist .nav-pills { border-bottom: 1px solid #CBD8DC; }
+.documentary-tablist .nav-link { border-radius: 0; margin-bottom: -1px; }
+.documentary-tablist .nav-link.active { background-color: transparent; color: var(--dark1); border-bottom: 3px solid var(--deepBlue); }
+
+.shadow1 { -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 52, 69, 0.07); box-shadow: 0px 10px 30px 0px rgba(0, 52, 69, 0.07); }
+
+.sidebar-box { position: -webkit-sticky; position: sticky; top: 60px; }
+
+.dot-icon { line-height: 10px; }
+
+/*--- Afzal bhail -/End ---*/
