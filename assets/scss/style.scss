@@ -1344,17 +1344,26 @@ a {
         gap: 30px;
         justify-content: center;
 
+
+
         .ni-plus {
             width: 24px;
             height: 28px;
             background-image: url('data:image/svg+xml,<svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 13V8H11V13H6V15H11V20H13V15H18V13H13Z" fill="%236A96A4"/></svg>');
-            background-size: contain;
+            background-size: auto;
+            background-repeat: no-repeat;
+            
+            margin-left: 20px;
+
         }
         .ni-minus {
             width: 24px;
             height: 28px;
             background-image: url('data:image/svg+xml,<svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 13H6V15H18V13Z" fill="%23009FD3"/></svg>');
-            background-size: contain;
+            background-size: auto;
+            background-repeat: no-repeat;
+            
+            margin-left: 20px;
         }
 
         @media (max-width:1200px) {
@@ -1378,6 +1387,27 @@ a {
     color: var(--deepBlue);
 }
 
+.fs-22 {
+    font-size: 22px;
+    line-height: 32px;
+}
+
+#v-pills-tabContent{
+    &:focus-visible {
+        outline: none !important;
+    }
+    &:focus-visible {
+        outline: -webkit-focus-ring-color auto 0px !important;
+    }
+}
+#v-pills-allquestions {
+    &:focus-visible {
+        outline: none !important;
+    }
+    &:focus-visible {
+        outline: -webkit-focus-ring-color auto 0px !important;
+    }
+}
 /* jobs  - end*/
 
 

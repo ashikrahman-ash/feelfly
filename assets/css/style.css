@@ -358,13 +358,21 @@ a:hover { color: #009fd3; }
 .all-tab-action .tab-action .tab .tablinks.active { padding-left: 25px; border-left: 3px solid #009FD3 !important; }
 @media (max-width: 991px) { .all-tab-action .tab-action .tab .tablinks.active { padding: 6px 0px; -ms-flex-wrap: wrap; flex-wrap: wrap; border-left: 0px !important; border-bottom: 1px solid #009FD3 !important; } }
 .all-tab-action .all-tab-content { max-width: 1160px; padding: 0 15px; margin: 0 auto; width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; gap: 30px; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
-.all-tab-action .all-tab-content .ni-plus { width: 24px; height: 28px; background-image: url('data:image/svg+xml,<svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 13V8H11V13H6V15H11V20H13V15H18V13H13Z" fill="%236A96A4"/></svg>'); background-size: contain; }
-.all-tab-action .all-tab-content .ni-minus { width: 24px; height: 28px; background-image: url('data:image/svg+xml,<svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 13H6V15H18V13Z" fill="%23009FD3"/></svg>'); background-size: contain; }
+.all-tab-action .all-tab-content .ni-plus { width: 24px; height: 28px; background-image: url('data:image/svg+xml,<svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 13V8H11V13H6V15H11V20H13V15H18V13H13Z" fill="%236A96A4"/></svg>'); background-size: auto; background-repeat: no-repeat; margin-left: 20px; }
+.all-tab-action .all-tab-content .ni-minus { width: 24px; height: 28px; background-image: url('data:image/svg+xml,<svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 13H6V15H18V13Z" fill="%23009FD3"/></svg>'); background-size: auto; background-repeat: no-repeat; margin-left: 20px; }
 @media (max-width: 1200px) { .all-tab-action .all-tab-content .item { -ms-flex-preferred-size: 300px; flex-basis: 300px; } }
 
 .tab button { background-color: inherit; border: none; outline: none; cursor: pointer; -webkit-transition: 0.3s; transition: 0.3s; }
 
 .tab button.active { color: var(--deepBlue); }
+
+.fs-22 { font-size: 22px; line-height: 32px; }
+
+#v-pills-tabContent:focus-visible { outline: none !important; }
+#v-pills-tabContent:focus-visible { outline: -webkit-focus-ring-color auto 0px !important; }
+
+#v-pills-allquestions:focus-visible { outline: none !important; }
+#v-pills-allquestions:focus-visible { outline: -webkit-focus-ring-color auto 0px !important; }
 
 /* jobs  - end*/
 /*--- FAQ page -/End ---*/
