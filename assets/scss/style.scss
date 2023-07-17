@@ -40,6 +40,8 @@ body {
     --dark1: #0d1525;
     --dark2: #4b566b;
     --purple: #0052cc;
+    --green: #00D9C7;
+    --weldonBlue: #769FAD;
 }
 
 /* reset, root - END */
@@ -66,6 +68,14 @@ body {
 
 .text-clr-blue {
     color: var(--blue);
+}
+
+.text-clr-weldonBlue {
+    color: var(--weldonBlue);
+}
+
+.text-clr-green {
+    color: var(--green);
 }
 
 .text-clr-deepBlue {
@@ -108,7 +118,6 @@ body {
     color: var(--purple);
 }
 
-
 .text-clr-dark1 {
     color: var(--dark1);
 }
@@ -116,7 +125,6 @@ body {
 .text-clr-dark-2 {
     color: var(--dark2);
 }
-
 
 .text-clr-purple {
     color: var(--purple);
@@ -158,7 +166,6 @@ body {
 .bg-clr-danger {
     background-color: var(--danger);
 }
-
 
 .bg-clr-dark-1 {
     color: var(--dark-1);
@@ -689,33 +696,6 @@ a {
     background-position: bottom center;
 }
 
-#relevent-costs {
-    .relevent-costs-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        gap: 30px;
-
-        .relevent-cost-item {
-            border-radius: 4px;
-            box-shadow: 0px 30px 30px 0px rgba(0, 52, 69, 0.05);
-            padding: 20px;
-            background-color: #FFFFFF;
-        }
-
-        @media(max-width: 992px) {
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-
-        @media(max-width: 768px) {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        @media(max-width: 576px) {
-            grid-template-columns: 1fr;
-        }
-    }
-}
-
 // VISA GUIDE PAGE /-END
 
 /*loading  - start*/
@@ -953,6 +933,7 @@ a {
         border-radius: 100px;
         background: #fff;
         box-shadow: 0px 30px 30px 0px rgba(0, 52, 69, 0.1);
+
         svg * {
             fill: #5d737a;
         }
@@ -965,6 +946,7 @@ a {
 
         &:hover {
             background-color: var(--deepBlue);
+
             svg * {
                 fill: #fff;
             }
@@ -982,17 +964,20 @@ a {
         background-color: var(--main-extra-light);
     }
 }
+
 // swiper slider = End
 
 // testimonial = start
 .testimonial-wrap {
     .testimonial-item {
         border-radius: 16px;
+
         .testimonial-right {
             padding: 40px 60px;
             border-radius: 0px 16px 16px 0px;
             overflow: hidden !important;
         }
+
         .testimonial-item-left {
             border-radius: 16px 0 0 16px;
             overflow: hidden !important;
@@ -1000,18 +985,112 @@ a {
     }
 }
 
+// swiper slider = start
+.swiper-arrow {
+    // top: -40px;
+    position: absolute;
+    transition: all 0.2s linear;
+    z-index: 10;
+    background-color: transparent;
 
+    &:hover {
+        color: var(--purple);
+    }
+}
+
+.apps-swiper-paginate {
+    button {
+        height: 42px;
+        width: 42px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        left: -80px;
+        transform: translateY(-50%);
+        border-radius: 100px;
+        background: #fff;
+        box-shadow: 0px 30px 30px 0px rgba(0, 52, 69, 0.1);
+
+        svg * {
+            fill: #5d737a;
+        }
+
+        &.recent-deals-swiper-next,
+        &.testimonial-prev {
+            right: -80px !important;
+            left: auto;
+        }
+
+        &:hover {
+            background-color: var(--deepBlue);
+
+            svg * {
+                fill: #fff;
+            }
+        }
+    }
+}
+
+.swiper-pagination-bullet {
+    display: none;
+    width: 10px;
+    height: 10px;
+    background-color: var(--dark3);
+
+    &.swiper-pagination-bullet-active {
+        background-color: var(--main-extra-light);
+    }
+}
+
+// swiper slider = End
+
+// testimonial = start
+.testimonial-wrap {
+    .testimonial-item {
+        border-radius: 16px;
+
+        .testimonial-right {
+            padding: 40px 60px;
+            border-radius: 0px 16px 16px 0px;
+            overflow: hidden !important;
+        }
+
+        .testimonial-item-left {
+            border-radius: 16px 0 0 16px;
+            overflow: hidden !important;
+        }
+    }
+}
+
+// subscribe-email
+.subscribe-email {
+    .form-control {
+        height: 58px;
+    }
+
+    .subs-btn {
+        border-radius: 0 25px 25px 0;
+        position: absolute;
+        right: 4px;
+        top: 4px;
+        height: 50px;
+    }
+}
 
 /*--- Contact Us -/Start ---*/
 .social-icons-inner-wrap {
     gap: 30px;
-    @media (max-width: 992px) { 
+
+    @media (max-width: 992px) {
         gap: 20px;
     }
+
     a {
         svg * {
             transition: all 200ms linear;
         }
+
         &:hover {
             svg * {
                 fill: #009fd3;
@@ -1031,6 +1110,7 @@ a {
     }
 }
 
+
 .contact-form-wrap {
 
     .formInputCommon {
@@ -1042,9 +1122,11 @@ a {
         line-height: 28px;
         color: #8A8A8A;
         font-weight: 400;
+
         &::placeholder {
             color: #8A8A8A;
         }
+
         &:focus {
             outline: none !important;
             border: 2px solid #009FD3;
@@ -1062,6 +1144,7 @@ a {
         padding: 16px 40px;
         margin-top: 15px;
         transition: all 200ms linear;
+
         &:hover {
             background: #009FD3;
             color: #ffffff;
@@ -1081,9 +1164,11 @@ a {
 /*--- Our Policy -/Start ---*/
 .our-policy-section {
     padding-top: 160px;
+
     .our-policy-wrap {
         padding: 70px 116px;
     }
+
     .our-policy-list {
         gap: 16px;
     }
@@ -1092,6 +1177,7 @@ a {
 .pb-40 {
     padding-bottom: 40px;
 }
+
 .pb-50 {
     padding-bottom: 50px;
 }
@@ -1108,10 +1194,28 @@ a {
 .error-404-section {
     padding-top: 160px;
 }
+
 /*--- Error 404 -/End ---*/
 
 
+/*--- breadcrumb ---*/
+.breadcrumb {
+    .breadcrumb-item {
+        &.active {
+            color: var(--lightBlue);
+        }
 
-// travel-wrap = End
+        &::before {
+            padding: 0;
+            color: var(--lightBlue);
+        }
+    }
+}
 
-// travel-wrap = End
+/*--- breadcrumb -/End ---*/
+
+
+
+.footer-bottom {
+    border-top: 1px solid #0B3C4D;
+}
