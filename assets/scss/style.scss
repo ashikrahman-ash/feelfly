@@ -42,6 +42,8 @@ body {
     --purple: #0052cc;
     --green: #00D9C7;
     --weldonBlue: #769FAD;
+
+    --dark-3: #66738D;
 }
 
 /* reset, root - END */
@@ -134,6 +136,10 @@ body {
     color: var(--danger-shadow);
 }
 
+.text-clr-dark-3 {
+    color: var(--dark-3);
+}
+
 // BG color
 .bg-clr-teal {
     background-color: var(--teal);
@@ -185,6 +191,10 @@ body {
 
 .bg-clr-danger-shadow {
     background-color: var(--danger-shadow);
+}
+
+.bg-clr-dark-3 {
+    background-color: var(--dark-3);
 }
 
 .fs-12 {
@@ -550,9 +560,9 @@ a {
 
 // sub-banner
 .sub-banner {
-    background-image: url(../img/subpage-bg.png);
+    background-image: url(../img/subbanner.svg);
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     background-position: bottom center;
 
     .sub-banner-content {
@@ -1219,3 +1229,160 @@ a {
 .footer-bottom {
     border-top: 1px solid #0B3C4D;
 }
+
+
+/*--- FAQ page -/Start ---*/
+.faq-wrapper {
+    border-radius: 16px;
+    padding:  60px 100px;
+}
+
+
+
+//===============
+/* faq style */
+
+.accordion-list {
+    .accordion-title {
+        cursor: pointer !important;
+    }
+
+    .accordion-desc {
+        display: grid;
+        grid-template-columns: 20px 1fr;
+        gap: 10px;
+    }
+
+    .border-bottom {
+        border-bottom: 1px solid #BADDF0 !important;
+    }
+}
+
+/* faq style - END*/
+
+.all-tab-action {
+    flex-direction: row;
+
+    @media (max-width:991px) {
+        flex-direction: column;
+    }
+
+    .tab-action {
+        // padding-left: 70px;
+        width: 350px;
+        // border-left: 3px solid #CDDFE4;
+        position: sticky;
+        top: 100px;
+
+        @media (max-width: 991px) {
+            max-width: 560px;
+            width: 100%;
+            margin: auto;
+            border-left: 0;
+            border-bottom: 0px solid transparent;
+            position: initial;
+            padding: 0 20px;
+        }
+
+        @media (max-width:1500px) and (min-width:990px) {
+            padding-left: 20px;
+        }
+
+        .tab {
+            border-left: 1px solid #D7E5E9;
+
+            @media (max-width:991px) {
+                flex-wrap: wrap !important;
+                border-left: 0px solid transparent;
+            }
+
+            .tablinks {
+                padding-left: 25px;
+                border-left: 3px solid transparent !important;
+                margin-left: -2px;
+                text-align: left;
+                &.allQuestion {
+                    color: #003959 !important;
+                }
+                @media (max-width:1400px) {
+                    font-size: 20px !important;
+                }
+
+                @media (max-width:991px) {
+                    flex-wrap: wrap;
+                    padding: 6px 0px;
+                    margin-left: 0px;
+                    border-left: 0 !important;
+                    border-bottom: 1px solid transparent !important;
+                    margin: 0 5px;
+                }
+
+
+                &.active {
+                    padding-left: 25px;
+                    border-left: 3px solid #009FD3 !important;
+
+                    @media (max-width:991px) {
+                        padding: 6px 0px;
+                        flex-wrap: wrap;
+                        border-left: 0px !important;
+                        border-bottom: 1px solid #009FD3 !important;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .all-tab-content {
+        max-width: 1160px;
+        padding: 0 15px;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+
+        .ni-plus {
+            width: 24px;
+            height: 28px;
+            background-image: url('data:image/svg+xml,<svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 13V8H11V13H6V15H11V20H13V15H18V13H13Z" fill="%236A96A4"/></svg>');
+            background-size: contain;
+        }
+        .ni-minus {
+            width: 24px;
+            height: 28px;
+            background-image: url('data:image/svg+xml,<svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 13H6V15H18V13Z" fill="%23009FD3"/></svg>');
+            background-size: contain;
+        }
+
+        @media (max-width:1200px) {
+            .item {
+                flex-basis: 300px;
+            }
+
+        }
+    }
+}
+
+.tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tab button.active {
+    color: var(--deepBlue);
+}
+
+/* jobs  - end*/
+
+
+
+
+//===============
+
+/*--- FAQ page -/End ---*/

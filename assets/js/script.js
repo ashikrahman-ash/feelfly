@@ -46,7 +46,59 @@ $(window).on("load", function () {
 
 
 $(document).ready(function () {
+
+
+            //Faq page - Start
+    //tab-category-filter
+    const tabLinks = document.querySelectorAll(".tablinks");
+    const items = document.querySelectorAll(".item");
+
+    for (const link of tabLinks) {
+        link.addEventListener("click", () => {
+            // Get the filter value from the data-filter attribute
+            const filterValue = link.getAttribute("data-filter");
+
+            // Loop through all items and hide/show them based on the filter value
+            for (const item of items) {
+                if (filterValue === "all") {
+                    item.style.display = "block";
+                } else if (item.classList.contains(filterValue)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            }
+
+            // Set the active class on the clicked button and remove from others
+            for (const tabLink of tabLinks) {
+                tabLink.classList.remove("active");
+            }
+            link.classList.add("active");
+        });
+    }
+
+    // Accordion
     
+    $(function () {
+        if ($('.accordion-list').length) {
+            $('.accordion-list').on('click', '.accordion-title', function (e) {
+                e.preventDefault();
+                // remove siblings activities
+                $(this).closest('.accordion-list-item').siblings().removeClass('open').find('.accordion-desc').slideUp();
+                $(this).closest('.accordion-list-item').siblings().find('.ni').addClass('ni-plus').removeClass('ni-minus');
+
+                // add slideToggle into this
+                $(this).closest('.accordion-list-item').toggleClass('open').find('.accordion-desc').slideToggle();
+                $(this).find('.ni').toggleClass('ni-plus ni-minus');
+            });
+        }
+    });
+
+    //Faq page - End
+
+
+
+
 
     // recent-deals-active = slider
     let recentDealsActive = new Swiper(".recent-deals-active", {
@@ -113,7 +165,10 @@ $(document).ready(function () {
     //     });
     //     wow.init();
     // });
+
+
 });
+
 
 
 
